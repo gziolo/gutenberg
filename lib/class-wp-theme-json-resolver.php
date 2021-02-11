@@ -482,7 +482,7 @@ class WP_Theme_JSON_Resolver {
 	 */
 	public static function theme_has_support() {
 		if ( ! isset( self::$theme_has_support ) ) {
-			self::$theme_has_support = ( '' !== self::get_file_path_from_theme( 'experimental-theme.json' ) );
+			self::$theme_has_support = (bool) self::get_file_path_from_theme( 'experimental-theme.json' );
 		}
 
 		return self::$theme_has_support;
