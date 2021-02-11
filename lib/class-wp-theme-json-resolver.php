@@ -495,7 +495,7 @@ class WP_Theme_JSON_Resolver {
 	 * If it isn't, returns an empty string,
 	 * otherwise returns the whole file path.
 	 *
-	 * @param string $file_name
+	 * @param string $file_name Name of the file.
 	 * @return string The whole file path or empty if the file doesn't exist.
 	 */
 	private static function get_file_path_from_theme( $file_name ) {
@@ -507,7 +507,7 @@ class WP_Theme_JSON_Resolver {
 		// When the theme.json merge algorithm properly supports
 		// child themes, this should also fallback
 		// to the template path, as locate_template did.
-		$located = '';
+		$located   = '';
 		$candidate = get_stylesheet_directory() . '/' . $file_name;
 		if ( is_readable( $candidate ) ) {
 			$located = $candidate;
